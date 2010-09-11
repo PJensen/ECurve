@@ -16,8 +16,7 @@ from Point import Point
 #
 class ECurve:
     def __init__(self, p, a, b):
-
-	# Ensure that the passed value of p is indeed prime.
+        # Ensure that the passed value of p is indeed prime.
         if (not self.__isPrime(p)):
             raise BaseException(str(p) + " is not Prime")	
 
@@ -26,14 +25,13 @@ class ECurve:
         self.__a = a # The coefficient: a
         self.__b = b # The coefficient: b
         self.__p = p # The prime p.
-	
         self.__INIFINITY = Point(None, None)
- 
+
         self.points = [] # Create an array that will contain all Points
                             # on this Curve.
- 
+
         self.__findPoints() # Find all points on this curve.
- 
+
         return
 
     ##
